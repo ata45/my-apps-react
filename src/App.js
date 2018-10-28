@@ -66,7 +66,7 @@ class App extends Component {
         <table>
           <tbody>
             <TableHeader/>
-            {this.state.data.map((orang, i ) => <TableRow key = {i} data ={orang} />)}
+            {this.state.data.map((orang, i)=><TableRow key={i} data={orang} />)}
           </tbody>
         </table>
       </div>
@@ -104,7 +104,7 @@ class Content extends Component{
   <div>
     <p myattribute = "somevalue">This is the content</p>
     <p>{j==1? 'False' : 'true'}</p>
-    <h1 style={style}></h1>
+    <h1 style={style}>Nani</h1>
   </div>
   );
 }
