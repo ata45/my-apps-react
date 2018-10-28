@@ -31,9 +31,38 @@ class App extends Component {
         <p myattribute = "somevalue">This is the content</p>
         <p>{j==1? 'False' : 'true'}</p>
         <h1 style={style}></h1>
+    
+        <Header/>
+        <Content/>
       </div>
     );
   }
+}
+
+class Header extends Component{
+  render(){
+
+
+  return(
+    <h1>Ini header</h1>
+  );
+  }
+}
+
+class Content extends Component{
+  render(){
+    var j = 1;
+    var style ={
+      color: "yellow"
+    }
+  return(
+  <div>
+    <p myattribute = "somevalue">This is the content</p>
+    <p>{j==1? 'False' : 'true'}</p>
+    <h1 style={style}></h1>
+  </div>
+  );
+}
 }
 
 export default App;
