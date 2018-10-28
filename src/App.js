@@ -4,36 +4,36 @@ import './App.css';
 
 class App extends Component {
   render() {
-    var i = 10;
-    var classHeader = {
-      fontSize : 100,
-      color : 'black'
+    var j = 2;
+    var style ={
+      fontSize : 10,
+      color: 'blue'
     }
     return (
       /*<div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        </div>*/
-        <div>
-        <h1 className="App-link"> Ini header </h1>
-        <p data-myattribute = "somevalue">This is the content!!!</p>
-        <h1> {i == 1 ? 'True' : 'False'} </h1>
-        <h2 style = {classHeader}>Ini h2</h2>
-        </div>
-        );
-      }
-    }
+      <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+      Edit <code>src/App.js</code> and save to reload.
+      </p>
+      <a
+      className="App-link"
+      href="https://reactjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+      >
+      Learn React
+      </a>
+      </header>
+      </div>*/
+      <div>
+        <h1 className="App-header">ini header</h1>
+        <p myattribute = "somevalue">This is the content</p>
+        <p>{j==1? 'False' : 'true'}</p>
+        <h1 style={style}></h1>
+      </div>
+    );
+  }
+}
 
-    export default App;
+export default App;
