@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var i = 10;
     return (
       /*<div className="App">
         <header className="App-header">
@@ -20,12 +21,14 @@ class App extends Component {
             Learn React
           </a>
         </header>
-      </div>*/
-      
-        <h1> Ini header </h1>
-        <p data-myatribute = "someatribute"> </p>
-    );
-  }
-}
+        </div>*/
+        <div>
+        <h1 className="App-link"> Ini header </h1>
+        <p data-myattribute = "somevalue">This is the content!!!</p>
+        <h1> {i == 1 ? 'True' : 'False'} </h1>
+        </div>
+        );
+      }
+    }
 
-export default App;
+    export default App;
