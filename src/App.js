@@ -3,6 +3,34 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      data:
+      [
+        {
+          "id": 1,
+          "name": "Janu",
+          "age": 40,
+        },
+        {
+          "id": 2,
+          "name": "Janu",
+          "age": 40,
+        },
+        {
+          "id": 3,
+          "name": "Janu",
+          "age": 40,
+        },
+        {
+          "id": 4,
+          "name": "Janu",
+          "age": 40,
+        }
+      ]
+    }
+  }
   render() {
     var j = 2;
     var style ={
@@ -31,9 +59,16 @@ class App extends Component {
         <p myattribute = "somevalue">This is the content</p>
         <p>{j==1? 'False' : 'true'}</p>
         <h1 style={style}></h1>
-    
+        <Line/>
         <Header/>
         <Content/>
+        <Line/>
+        <table>
+          <tbody>
+            <TableHeader/>
+            {this.state.data.map((orang, i ) => <TableRow key = {i} data ={orang} />)}
+          </tbody>
+        </table>
       </div>
     );
   }
@@ -46,6 +81,16 @@ class Header extends Component{
   return(
     <h1>Ini header</h1>
   );
+  }
+}
+
+class Line extends Component{
+  render(){
+    return(
+    <div>
+        <p>-----------------------------------------------------------------------</p>
+    </div>
+    );
   }
 }
 
@@ -63,6 +108,30 @@ class Content extends Component{
   </div>
   );
 }
+}
+
+class TableHeader extends Component{
+  render(){
+    return(
+    <tr>
+      <th>ID</th>
+      <th>Nama</th>
+      <th>Umur</th>
+    </tr>
+    );
+  }
+}
+
+class TableRow extends Component{
+  render(){
+    return(
+      <tr>
+        <td>{this.props.data.id}</td>
+        <td>{this.props.data.name}</td>
+        <td>{this.props.data.age}</td>
+      </tr>
+    );
+  }
 }
 
 export default App;
