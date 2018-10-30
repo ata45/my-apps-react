@@ -12,7 +12,7 @@ class state extends React.Component{
   render(){
     rerturn(
       <div>
-        
+        <h1>{this.state.header}</h1>
       </div>
     );
   }
