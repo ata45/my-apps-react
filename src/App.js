@@ -69,6 +69,7 @@ class App extends Component {
             {this.state.data.map((orang, i)=><TableRow key={i} data={orang} />)}
           </tbody>
         </table>
+        <Line/>
       </div>
     );
   }
