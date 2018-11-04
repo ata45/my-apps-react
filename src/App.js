@@ -70,6 +70,7 @@ class App extends Component {
           </tbody>
         </table>
         <Line/>
+        <UsingProps/>
       </div>
     );
   }
@@ -139,10 +140,14 @@ class UsingProps extends Component{
   render(){
     return(
     <div>
-
+        <p>{this.props.header}</p>
     </div>
     );
   }
 }
+UsingProps.defaultProps={
+  header: "Ini header",
+}
+
 
 export default App;
