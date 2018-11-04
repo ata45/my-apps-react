@@ -135,4 +135,14 @@ class TableRow extends Component{
   }
 }
 
+class UsingProps extends Component{
+  render(){
+    return(
+    <div>
+
+    </div>
+    );
+  }
+}
+
 export default App;
